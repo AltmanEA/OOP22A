@@ -1,4 +1,14 @@
-title: "Объектно-ориентированное программирование"
+title: "Объектно-ориентированное"
+club: "https://vk.com/club220056316"
 content:
-  - 10_intro:
-    - 10_about
+  - url: "10_basic"
+    title: "Основы"
+    slides:
+      - url: "10_basic"
+        title: "Основы языка Kotlin"
+      - url: "20_object"
+        title: "Объекты"
+      - url: "30_class"
+        title: "Классы"
+  - 20_aaa:
+    - aaa
