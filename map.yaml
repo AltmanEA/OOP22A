@@ -9,5 +9,12 @@ themes:
         title: "Объекты"
       - url: "30_class"
         title: "Классы"
-  - 20_aaa:
-    - aaa
+  - url: "20_intro"
+    title: "Введение"
+    slides:
+      - url: "10_basic"
+        title: "Основы языка Kotlin"
+      - url: "20_object"
+        title: "Объекты"
+      - url: "30_class"
+        title: "Классы"
