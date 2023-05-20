@@ -1,6 +1,5 @@
 title: "Объектно-ориентированное"
-club: "https://vk.com/club220056316"
-content:
+themes:
   - url: "10_basic"
     title: "Основы"
     slides:
