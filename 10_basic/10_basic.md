@@ -98,6 +98,16 @@ val myFalse: Boolean = false
 
 ~--~
 
+<div class='quiz' data-quiz='{ 
+    "question": "Вопрос с несколькими правильными ответами",
+    "type": "Multi",
+    "answers": [
+        { "isRight":true, "text":"Ответ 1"},
+        { "isRight":false, "text":"Ответ 2"},
+        { "isRight":true, "text":"Ответ 3"}
+    ] 
+}'></div>
+
 # Операции
 
 ~-~
