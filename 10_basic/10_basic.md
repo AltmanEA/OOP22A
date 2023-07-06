@@ -2,15 +2,27 @@
 
 ~-~
 
+<div class='quiz' data-quiz='{ 
+    "question": "Вопрос с одним правильным ответом <img src=\"https://bibliomo.ru/upload/iblock/27a/0_10_scaled.jpg\" width=10%>",
+    "type": "Single",
+    "answers": [
+        { "isRight":true, "text":"<b>Ответ 1</b>"},
+        { "isRight":false, "text":"Ответ 2"},
+        { "isRight":false, "text":"Ответ 3"}
+    ]
+}'></div>
+
+~-~
+
 ### Объявления переменных
 
 ```Kotlin
-val a: Int = 1	// Общий вид
-val b = 2		 // Тип `Int` выводится компилятором
-val c: Int		// Без инициализации тип обязателен
-c = 3			 // Отложенная инициализация
-var x = 5		 // Тип `Int` выводится компилятором
-x += 1			// var можно изменять
+val a: Int = 1 // Общий вид
+val b = 2   // Тип `Int` выводится компилятором
+val c: Int  // Без инициализации тип обязателен
+c = 3    // Отложенная инициализация
+var x = 5   // Тип `Int` выводится компилятором
+x += 1   // var можно изменять
 ```
 
 ~-~
@@ -35,7 +47,6 @@ val oneMillion = 1_000_000
 ```
 
 ~-~
-
 
 ### Вещественные типы и константы
 
@@ -87,11 +98,11 @@ val myFalse: Boolean = false
 
 ~--~
 
-# Операции 
+# Операции
 
 ~-~
 
-### Арифметические 
+### Арифметические
 
 | prefix | postfix | infix | assignment |
 |--------|---------|-------|------------|
@@ -122,6 +133,7 @@ val myFalse: Boolean = false
 - !  - negation
 
 Ленивые операции:
+
 ```Kotlin
 if (b != 0 && a/b > 2)
  ...
@@ -160,14 +172,14 @@ val numberString: String = number.toString()
 ### Массивы
 
 ```Kotlin
-val x: IntArray = intArrayOf(1, 2, 3) 	// массив примитивов
-val y: Array< Int > = arrayOf(1, 2, 3)	// массив объектов
+val x: IntArray = intArrayOf(1, 2, 3)  // массив примитивов
+val y: Array< Int > = arrayOf(1, 2, 3) // массив объектов
 // Первый аргумент Array - размер массива
 // второй - функция инициализации (i - индекс элемента)
 val z: Array< Int > = Array(5, { i -> i*i }) 
 
-x[0] = у.size		  // 3
-x[1] = z.last()		// 16
+x[0] = у.size    // 3
+x[1] = z.last()  // 16
 ```
 
 ~-~
@@ -180,6 +192,7 @@ x.addAll(listOf(1, 2, 3))
 x.add(5)
 print(x)
 ```
+
 ```
 [1, 2, 3, 5]
 ```
@@ -208,6 +221,7 @@ val r2: IntProgression = 10 downTo 1 step 2
 println(5 in r1)
 println(5 !in r2)
 ```
+
 ```
 true
 true
@@ -215,7 +229,7 @@ true
 
 ~-~
 
-### Строки. Представление.
+### Строки. Представление
 
 ```Kotlin
 val i = 42
@@ -225,13 +239,14 @@ charArray[0] = charArray[0].uppercaseChar()
 val newS: String = String(charArray)
 print(newS)
 ```
+
 ```
 Answer is 42
 ```
 
 ~-~
 
-### Строки. Операции.
+### Строки. Операции
 
 ```Kotlin
 val s1 = "string one"
@@ -240,6 +255,7 @@ println(s1.replace(" ", "_"))
 println(s1.substring(1 .. 3))
 println(s1.split(" "))
 ```
+
 ```
 STRING ONE
 string_one
@@ -267,9 +283,9 @@ val t: Triple<Int, String, Char> =
 
 ```Kotlin
 if (a % 2 == 0)
-	print("a is even\n")
+ print("a is even\n")
 else
-	print("a is odd\n")
+ print("a is odd\n")
 
 val min = if (a < b) a else b
 ```
@@ -283,13 +299,14 @@ val min = if (a < b) a else b
 
 ```Kotlin
 var result = when(a){
-	in 0..6 -> "ночь"
-	in 6..12 -> "утро"
-	in 12..18 -> "день"
-	in 18..24 -> "вечер"
-	else -> "ошибка"
+ in 0..6 -> "ночь"
+ in 6..12 -> "утро"
+ in 12..18 -> "день"
+ in 18..24 -> "вечер"
+ else -> "ошибка"
 }
 ```
+
 - Структурная конструкция (нет break!).
 
 ~-~
@@ -301,13 +318,15 @@ for(i in 0..5){
     print(i)
 }
 ```
+
 ```Kotlin
 val a = arrayOf(1, 2, 3)
 var s = 0
 for(x in a){
-	s += x
+ s += x
 }
 ```
+
 - Применяется при заранее известном числе повторений.
 
 ~-~
@@ -322,6 +341,7 @@ while (bits > 0) {
     bits = tmp
 }
 ```
+
 ```Kotlin
 print("\nEnter Yes\n")
 do {
