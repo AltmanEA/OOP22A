@@ -108,8 +108,6 @@ val myFalse: Boolean = false
     ] 
 }'></div>
 
-# Операции
-
 ~-~
 
 ### Арифметические
